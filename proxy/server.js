@@ -20,8 +20,12 @@ app.use('/api/items', proxy({
     target: 'http://ec2-18-223-255-148.us-east-2.compute.amazonaws.com:3005'
 }));
 
-app.use('/imagesByID', proxy({
-    target: 'http://ec2-18-218-35-32.us-east-2.compute.amazonaws.com'
+app.use('/api/pictures', proxy({
+    target: 'http://ec2-3-17-163-197.us-east-2.compute.amazonaws.com:5000'
+}));
+
+app.use('/api/booking', proxy({
+    target: 'http://ec2-18-222-217-73.us-east-2.compute.amazonaws.com:3008'
 }))
 
 app.listen(port, () => {
